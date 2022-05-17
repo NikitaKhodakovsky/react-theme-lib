@@ -1,0 +1,36 @@
+{
+	"name": "react-theme-lib",
+	"version": "1.0.0",
+	"description": "Simple react theming library with prefers-color-scheme media support",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"author": "Nikita Khodakovsky",
+	"keywords": [
+		"react",
+		"theme",
+		"theming",
+		"prefers-color-scheme",
+		"dark",
+		"dark-mode",
+		"css-variables"
+	],
+	"license": "MIT",
+	"scripts": {
+		"build": "npx rollup -c"
+	},
+	"peerDependencies": {
+		"react": "^16.8.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.9",
+		"@types/react-dom": "^18.0.4",
+		"react": "^18.1.0",
+		"rollup": "^2.73.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-typescript2": "^0.31.2",
+		"typescript": "^4.6.4"
+	}
+}
