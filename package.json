@@ -1,6 +1,6 @@
 {
 	"name": "react-theme-lib",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple react theming library with prefers-color-scheme media support",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
