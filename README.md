@@ -38,9 +38,9 @@ const manager = new ThemeManager({
 })
 
 root.render(
-	<ThemeProvider manager={manager}>
-		<App />
-	</ThemeProvider>
+    <ThemeProvider manager={manager}>
+        <App />
+    </ThemeProvider>
 )
 ```
 
@@ -50,14 +50,14 @@ Then you can use **useTheme** hook inside your components
 import { useTheme } from 'react-theme-lib'
 
 function App() {
-	const { theme, toggleTheme } = useTheme()
+    const { theme, toggleTheme } = useTheme()
 
-	return (
-		<Fragment>
-			<div>{theme}</div>
-			<button onClick={toggleTheme}>Toggle Theme</button>
-		</Fragment>
-	)
+    return (
+        <Fragment>
+            <div>{theme}</div>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+        </Fragment>
+    )
 }
 ```
 
@@ -67,7 +67,7 @@ For example:
 
 ```html
 <body class="dark">
-	...
+    ...
 </body>
 ```
 
@@ -75,15 +75,15 @@ So you can easily make something like this
 
 ```css
 body.light {
-	--background: #fff;
+    --background: #fff;
 }
 
 body.dark {
-	--background: #333;
+    --background: #333;
 }
 
 .element {
-	background-color: var(--background);
+    background-color: var(--background);
 }
 ```
 
@@ -133,14 +133,14 @@ const previousUserTheme = fetchTheme()
 const onUserSetTheme = (theme: Theme) => sendThemeToTheServer()
 
 const manager = new ThemeManager({
-	previousUserTheme,
-	onUserSetTheme
+    previousUserTheme,
+    onUserSetTheme
 })
 
 const ui = (
-	<ThemeProvider manager={manager}>
-		<App />
-	</ThemeProvider>
+    <ThemeProvider manager={manager}>
+        <App />
+    </ThemeProvider>
 )
 ```
 
@@ -185,20 +185,20 @@ These methods are used internally by the library. The only thing you have to do 
 <br>
 
 ## ThemeManagerOptions
-
+    
 ```ts
 interface ThemeManagerOptions {
-	previousUserTheme?: Theme
-	superiorTheme?: Theme
-	defaultTheme?: Theme
-	keepInLocalStorage?: boolean
-	localStorageKey?: string
-	htmlElement?: HTMLElement
-	onChange?: Subscriber
-	onUserSetTheme?: Subscriber
-	disablePrefersColorScheme?: boolean
-	customLightClass?: string
-	customDarkClass?: string
+    previousUserTheme?: Theme
+    superiorTheme?: Theme
+    defaultTheme?: Theme
+    keepInLocalStorage?: boolean
+    localStorageKey?: string
+    htmlElement?: HTMLElement
+    onChange?: Subscriber
+    onUserSetTheme?: Subscriber
+    disablePrefersColorScheme?: boolean
+    customLightClass?: string
+    customDarkClass?: string
 }
 ```
 
@@ -226,9 +226,9 @@ React context provider that takes an instance of ThemeManager and makes it avail
 const manager = new ThemeManager()
 
 const ui = (
-	<ThemeProvider manager={manager}>
-		<App />
-	</ThemeProvider>
+    <ThemeProvider manager={manager}>
+        <App />
+    </ThemeProvider>
 )
 ```
 
@@ -242,11 +242,11 @@ Hook, which provides access to the core React API of this library.
 
 ```tsx
 interface UseThemeResult {
-	theme: Theme
-	isDark: boolean
-	isLight: boolean
-	setTheme: (theme: Theme) => void
-	toggleTheme: () => void
+    theme: Theme
+    isDark: boolean
+    isLight: boolean
+    setTheme: (theme: Theme) => void
+    toggleTheme: () => void
 }
 
 function useTheme(): UseThemeResult
