@@ -180,7 +180,7 @@ subscribe(subscriber: Subscriber): UnsubscribeFunction
 listen(): UnsubscribeFunction;
 ```
 
-These methods are used internally by the library. The only thing you have to do with ThemeManager is to pass it to **\<ThemeProveder/>**
+These methods are used internally by the library. The only thing you have to do with ThemeManager is to pass it to **\<ThemeProvider/>**
 
 <br>
 
