@@ -65,10 +65,12 @@ export class ThemeManager {
 		if (this.keepInLocalStorage) {
 			const value = localStorage.getItem(this.localStorageKey)
 
-			if (value === 'dark' || value === 'light') {
-				themeFromLocalStorage = value
-			} else {
-				console.error('Invalid theme value in localStorage')
+			if (value) {
+				if (value === 'dark' || value === 'light') {
+					themeFromLocalStorage = value
+				} else {
+					console.error('Invalid theme value in localStorage')
+				}
 			}
 		}
 
