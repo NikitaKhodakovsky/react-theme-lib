@@ -22,7 +22,7 @@ export function useTheme(): UseThemeResult {
 
 	return {
 		theme,
-		setTheme: themeManager.setTheme,
+		setTheme: themeManager.setTheme.bind(themeManager),
 		toggleTheme,
 		isDark: theme === 'dark',
 		isLight: theme === 'light'
